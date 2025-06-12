@@ -1,0 +1,152 @@
+/* About Section Container */
+.about-container {
+    background-color: #f7fafc;
+    min-height: 100vh;
+    padding: 4rem 1.5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+  }
+  
+  /* Wrapper */
+  .about-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  
+  /* Title */
+  .about-title {
+    font-size: 3rem;
+    color: #1e3a8a;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+  }
+  
+  /* About Description Text */
+  .about-text {
+    font-size: 1.2rem;
+    color: #4b5563;
+    margin-bottom: 3rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  
+  /* About Section */
+  .about-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3rem;
+  }
+  
+  /* Mission Section */
+  .about-mission {
+    flex: 1 1 400px;
+    font-size: 1rem;
+    color: #374151;
+    line-height: 1.8;
+    padding: 2rem;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* About Image */
+  .about-image {
+    flex: 1 1 400px;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Subtitle */
+  .about-subtitle {
+    font-size: 1.5rem;
+    color: #2563eb;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  /* List */
+  .about-list {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    color: #4b5563;
+    margin-top: 1rem;
+    line-height: 1.6;
+    font-size: 1rem;
+  }
+  
+  /* Footer */
+  .about-footer {
+    text-align: center;
+    margin-top: 4rem;
+    color: #4b5563;
+    font-size: 1rem;
+  }
+  
+  .about-footer h3 {
+    font-size: 1.25rem;
+    color: #1e40af;
+    margin-bottom: 0.5rem;
+  }
+  
+  .about-footer p {
+    font-size: 1rem;
+    color: #4b5563;
+    margin-top: 1rem;
+  }
+  
+  /* Buttons */
+  button {
+    background-color: #2563eb;
+    color: white;
+    font-weight: 600;
+    padding: 1rem 2.5rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 2rem;
+  }
+  
+  button:hover {
+    background-color: #1d4ed8;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .about-title {
+      font-size: 2.5rem;
+    }
+  
+    .about-text {
+      font-size: 1rem;
+    }
+  
+    .about-section {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+  
+    .about-mission, .about-image {
+      flex: 1 1 100%;
+    }
+  
+    .about-subtitle {
+      font-size: 1.25rem;
+    }
+  
+    button {
+      padding: 0.8rem 2rem;
+    }
+  }
+      

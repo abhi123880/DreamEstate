@@ -1,0 +1,130 @@
+/* NAVBAR STYLING */
+.navbar {
+  background: linear-gradient(90deg, #1e3a8a, #2563eb);
+  padding: 16px 32px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+/* LOGO */
+.navbar-logo {
+  font-size: 30px;
+  font-weight: 800;
+  color: #ffffff;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.navbar-logo:hover {
+  transform: scale(1.05);
+}
+
+/* NAV LINKS */
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.navbar-link {
+  color: #f1f1f1;
+  font-size: 16px;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar-link:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+}
+
+/* BUTTON GROUP */
+.navbar-buttons {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.navbar-button {
+  background: linear-gradient(to right, #2563eb, #1e3a8a);
+  color: #ffffff;
+  padding: 18px;
+  font-size: 14px;
+  margin-top: -5px;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-button:hover {
+  background: linear-gradient(to right, #2563eb, #1e3a8a);
+  transform: translateY(-2px);
+}
+
+/* USER ICON */
+.user-icon {
+  background-color: #ffffff;
+  color: #1e3a8a;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.user-icon:hover {
+  background-color: #e5e7eb;
+  transform: scale(1.1);
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .navbar-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+   
+    width: 100%;
+  }
+
+  .navbar-link,
+  .navbar-button {
+    width: 100%;
+    text-align: left;
+  }
+}

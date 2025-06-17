@@ -32,10 +32,15 @@ const Footer = () => {
         </div>
         <div className="footer-column">
           <h4 className="footer-subtitle">Contact Us</h4>
-          <p className="footer-text">Feel free to reach out to us for any inquiries:</p>
-          <p className="footer-text">📍 123 Dream Estate St., Cityville, USA</p>
-          <p className="footer-text">📞 Phone: (123) 456-7890</p>
-          <p className="footer-text">📧 Email: contact@dreamestate.com</p>
+          <p>Email:
+          <a href="mailto:nakrniabhishek128@gmail.com" className="text-blue-600 hover:underline">
+            nakrniabhishek128@gmail.com
+          </a></p>
+          <p>Phone:{" "}
+          <a href="tel:+919879843758" className="text-blue-600 hover:underline">
+          +91 98798 43758
+          </a>
+          </p>
         </div>
       </div>
 

@@ -13,6 +13,7 @@ const Home = () => {
     maxPrice: '',
     bedrooms: ''
   });
+  const [visibleCount, setVisibleCount] = useState(5);
 
   const navigate = useNavigate();
   const { isLoggedIn } = useAuth();
@@ -55,6 +56,7 @@ const Home = () => {
     }
 
     setFilteredProperties(filtered);
+    setVisibleCount(5); // reset visible count when filter changes
   }, [filters, properties]);
 
   const handleFilterChange = (e) => {
@@ -80,6 +82,10 @@ const Home = () => {
     } else {
       navigate("/login");
     }
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
@@ -140,7 +146,7 @@ const Home = () => {
               ))}
             </select>
           </div>
-          <div className="filter-actions">
+          <div className="filter-actions flex items-end">
             <button
               type="button"
               onClick={handleClearFilters}
@@ -151,31 +157,50 @@ const Home = () => {
           </div>
         </form>
       </section>
+
       <section className="property-listings py-16 px-6 bg-gray-100 max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold text-center mb-10">Featured Properties</h2>
         {filteredProperties.length === 0 ? (
           <p className="text-center text-gray-600">No properties found matching your filters.</p>
         ) : (
-          <div className="property-grid">
-            {filteredProperties.map((property) => (
-              <div key={property.id} className="property-card">
-                <img src={property.image} alt={property.title} className="property-image" />
-                <div className="property-content">
-                  <h3>{property.title}</h3>
-                  <p>{property.location}</p>
-                  <p className="price">{property.price}</p>
-                  <button
-                    onClick={() => handleViewDetails(property.id)}
-                    className="view-details-button"
-                  >
-                    View Details
-                  </button>
+          <>
+            <div className="property-grid">
+              {filteredProperties.slice(0, visibleCount).map((property) => (
+                <div key={property.id} className="property-card">
+                  <img src={property.image} alt={property.title} className="property-image" />
+                  <div className="property-content">
+                    <h3>{property.title}</h3>
+                    <p>{property.location}</p>
+                    <p className="price">{property.price}</p>
+                    <button
+                      onClick={() => handleViewDetails(property.id)}
+                      className="view-details-button"
+                    >
+                      View Details
+                    </button>
+                  </div>
                 </div>
+              ))}
+            </div>
+            {visibleCount < filteredProperties.length && (
+              <div className="show-more-container">
+                <button
+                  onClick={() => setVisibleCount(prev => prev + 5)}
+                  className="show-more-button"
+                >
+                  Show More
+                </button>
               </div>
-            ))}
-          </div>
+            )}
+          </>
         )}
       </section>
+      <button
+        onClick={scrollToTop}
+        className="arrow-button"
+      >
+        ↑
+      </button>
     </div>
   );
 };

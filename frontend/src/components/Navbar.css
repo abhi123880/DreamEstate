@@ -30,7 +30,7 @@
   transform: scale(1.05);
 }
 
-/* NAV LINKS */
+
 .navbar-links {
   display: flex;
   align-items: center;
@@ -53,7 +53,7 @@
   color: #ffffff;
 }
 
-/* BUTTON GROUP */
+
 .navbar-buttons {
   display: flex;
   align-items: center;
@@ -81,7 +81,7 @@
   transform: translateY(-2px);
 }
 
-/* USER ICON */
+
 .user-icon {
   background-color: #ffffff;
   color: #1e3a8a;
@@ -124,7 +124,7 @@
   }
 
   .navbar-buttons {
-    flex-direction: row; /* Keep buttons inline, not stacked */
+    flex-direction: row; 
     align-items: center;
     width: auto;
     gap: 10px;

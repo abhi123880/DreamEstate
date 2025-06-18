@@ -19,7 +19,7 @@ const Profile = () => {
       });
 
       const imageUrl = savedUser.profileImage
-        ? `http://localhost:5000${savedUser.profileImage}`
+        ? `https://dreamestate-42qs.onrender.com${savedUser.profileImage}`
         : '/assets/avatar.png';
 
       setPreviewUrl(imageUrl);
@@ -52,7 +52,7 @@ const Profile = () => {
     if (profileImage) data.append('profileImage', profileImage);
 
     try {
-      const res = await fetch(`http://localhost:5000/api/profile/${user._id}`, {
+      const res = await fetch(`https://dreamestate-42qs.onrender.com/api/profile/${user._id}`, {
         method: 'PUT',
         body: data,
       });

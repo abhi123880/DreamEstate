@@ -1,57 +1,94 @@
 .profile-container {
-  max-width: 400px;
-  margin: auto;
-  padding: 2rem;
+  max-width: 420px;
+  margin: 32px auto;
+  padding: 2.5rem 1.5rem 2rem 1.5rem;
   text-align: center;
-  background-color: #f4f4f4;
-  border-radius: 12px;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  background: #f9fafb;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(30, 58, 138, 0.10);
 }
 
 .profile-image {
-  width: 120px;
-  height: 120px;
+  width: 124px;
+  height: 124px;
   object-fit: cover;
   border-radius: 50%;
   cursor: pointer;
-  margin: 1rem auto;
+  margin: 1.5rem auto 1rem auto;
   display: block;
-  border: 2px solid #ccc;
+  border: 3px solid #2563eb;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.08);
+  transition: border-color 0.2s;
+}
+.profile-image:hover {
+  border-color: #1e40af;
 }
 
 .profile-form-group {
-  margin-bottom: 1rem;
+  margin-bottom: 1.4rem;
   text-align: left;
 }
 
 .profile-form-group label {
   display: block;
-  font-weight: bold;
-  margin-bottom: 0.3rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  color: #1e293b;
 }
 
 .profile-form-group input {
   width: 100%;
-  padding: 8px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1.5px solid #cbd5e1;
+  font-size: 1rem;
+  background: #fff;
+  transition: border-color 0.2s;
+}
+.profile-form-group input:focus {
+  outline: none;
+  border-color: #2563eb;
+  background: #f0f7ff;
 }
 
 .profile-update-button {
-  margin-top: 10px;
-  padding: 10px 20px;
-  background-color: #0077ff;
-  color: white;
+  margin-top: 12px;
+  padding: 11px 28px;
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  color: #fff;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.05rem;
   cursor: pointer;
+  box-shadow: 0 2px 12px rgba(37, 99, 235, 0.12);
+  transition: background 0.2s, transform 0.15s;
 }
-
-.profile-update-button:hover {
-  background-color: #005ecc;
+.profile-update-button:hover,
+.profile-update-button:focus {
+  background: linear-gradient(135deg, #1e40af, #2563eb);
+  transform: translateY(-2px) scale(1.03);
 }
 
 .profile-message {
-  color: green;
-  margin-bottom: 10px;
+  color: #059669; /* green-600 */
+  background: #ecfdf5;
+  border: 1px solid #bbf7d0;
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 16px;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+@media (max-width: 600px) {
+  .profile-container {
+    padding: 1.2rem 0.5rem 1.5rem 0.5rem;
+    border-radius: 10px;
+  }
+  .profile-image {
+    width: 90px;
+    height: 90px;
+    margin: 1rem auto 0.7rem auto;
+  }
 }

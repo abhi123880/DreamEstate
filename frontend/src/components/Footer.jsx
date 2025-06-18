@@ -32,14 +32,17 @@ const Footer = () => {
         </div>
         <div className="footer-column">
           <h4 className="footer-subtitle">Contact Us</h4>
-          <p>Email:
-          <a href="mailto:nakrniabhishek128@gmail.com" className="text-blue-600 hover:underline">
-            nakrniabhishek128@gmail.com
-          </a></p>
-          <p>Phone:{" "}
-          <a href="tel:+919879843758" className="text-blue-600 hover:underline">
-          +91 98798 43758
-          </a>
+          <p>
+            Email:{" "}
+            <a href="mailto:nakrniabhishek128@gmail.com" className="footer-link">
+              nakrniabhishek128@gmail.com
+            </a>
+          </p>
+          <p>
+            Phone:{" "}
+            <a href="tel:+919879843758" className="footer-link">
+              +91 98798 43758
+            </a>
           </p>
         </div>
       </div>

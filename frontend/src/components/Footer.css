@@ -35,6 +35,7 @@ body, html {
   text-align: center;
   box-sizing: border-box;
   word-wrap: break-word;
+  color: #fff; /* Ensures all text in columns is white */
 }
 
 .footer-title {
@@ -67,6 +68,7 @@ body, html {
   text-decoration: none;
   font-size: 0.95rem;
   word-break: break-word;
+  transition: color 0.3s;
 }
 
 .footer-link:hover {

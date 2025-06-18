@@ -16,3 +16,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+body, h1, h2, h3, h4, h5, h6, p, span, div {
+  user-select: none;
+}

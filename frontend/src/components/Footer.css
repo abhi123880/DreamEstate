@@ -35,7 +35,7 @@
   text-align: center;
   box-sizing: border-box;
   word-wrap: break-word;
-  color: #fff; /* Ensures all text in columns is white */
+  color: #fff; 
 }
 
 .footer-title {
@@ -235,7 +235,6 @@ html, body {
   }
 }
 
-/* Small mobile: tightest spacing */
 @media (max-width: 480px) {
   .footer {
     padding: 0.6rem 0.3rem 0.3rem 0.3rem;
